@@ -1,0 +1,156 @@
+/* Problem 1 */
+@media screen and (max-width: 650px) {
+    .container {
+        width: 70%;
+        display: grid;
+        grid-template-columns: 1fr minmax(1fr, 375px);
+    }
+
+    figure {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    figcaption {
+        font-size: 100%;
+    }
+}
+/* Problem 2 */
+@media screen and (min-width: 650px) {
+    .container {
+        width: 95%;
+        background-image: url("../images/concrete_seamless.png");
+        display: grid;
+        grid-template-columns:repeat(3, 25%);
+        justify-content: space-around;
+    }
+
+    figure:nth-child(2n+1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: end;
+    }
+
+    figure:nth-child(2n) {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        justify-self: start;
+    }
+
+    .jump:focus {
+        top: 0;
+    }
+}
+/* Problem 3 */
+@media screen and (min-width: 750px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4,20%);
+        justify-content: space-between;
+    }
+    figure:nth-child(2n+1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: start;
+    }
+
+    figure:nth-child(2n) {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        justify-self: end;
+    }
+
+    figure:last-child{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
+/* Problem 4 */
+@media screen and (min-width: 900px){
+    .container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    figure{
+        width: 20%;
+    }
+    figure:nth-child(2){
+        order: 99;
+    }
+    figure:nth-child(4n){
+        width: 40%;
+        border: 10px solid;
+    }
+}
+/* Problem 5 */
+@media screen and (min-width: 1050px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+        overflow: hidden;
+    }
+    figure{
+        width: 75% !important;
+        margin-bottom: 20px;
+        justify-self: center !important;
+    }
+    figure:nth-child(2){
+        order: 0;
+    }
+    figure:nth-child(2n+1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        transform: rotate(-15deg);
+    }
+    figure:nth-child(2n) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        transform: rotate(15deg);
+    }
+    figure:last-child{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+        transform:none;
+    }
+
+    /* Problem 6 */
+    .logo{
+        animation: logoAni 10s linear;
+    }
+    @keyframes logoAni {
+        0%{
+            opacity: 0;
+        }
+        20%{
+            opacity: 0.2;
+        }
+        40%{
+            opacity: 0.4;
+        }
+        60%{
+            opacity: 0.6;
+        }
+        80%{
+            opacity: 0.8;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+.container {
+    margin: 0 auto;
+}
+
+figure {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+figure img {
+    width: 100%;
+}
